@@ -1,3 +1,4 @@
+####Create Table Student
 
 create table Student
 (
@@ -7,6 +8,8 @@ contact int,
 age int,
 
 );
+
+####Create Table Marks
 
 create table Marks
 (
@@ -18,12 +21,21 @@ English int,
 
 );
 
+#####add Foreign Key
+
 ALTER TABLE Marks
 ADD FOREIGN KEY (StudentId) REFERENCES Student(Id);
 
+###insert 
 INSERT INTO Student (Stuname,contact,age) VALUES ('Sanuka', 0752329654, 30);
 
+###add Total marks
 ALTER TABLE Marks ADD TotalMarks int;
 
-
+#### add TotalMarks calculation
 ALTER TABLE Marks ADD TotalMarks AS (Maths + Science + English);
+
+###Add GetRank Stored Procedure
+CREATE PROCEDURE GetClasses
+As
+SELECT Student.Stuname,Marks.English,Marks.Maths,Marks.Science,Marks.TotalMarks FROM Student INNER JOIN Marks ON Student.Id=Marks.StudentId Order By TotalMarks Desc;

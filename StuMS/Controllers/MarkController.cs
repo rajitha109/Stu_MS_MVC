@@ -2,6 +2,8 @@
 using StuMS.Models;
 using Microsoft.EntityFrameworkCore;
 
+
+
 namespace StuMS.Controllers
 {
     public class MarkController : Controller
@@ -22,6 +24,27 @@ namespace StuMS.Controllers
             return View(displaydata);
             
         }
+
+        [HttpPost]
+        public IActionResult Index(IFormFile file, [FromServices] Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
+        {
+            #region Upload CSV
+            string filename = $"{hostingEnvironment.WebRootPath}\\files\\{file}";
+            
+            using (FileStream fileStream = System.IO.File.Create(filename))
+            {
+                file.CopyTo(fileStream);
+                fileStream.Flush();
+            }
+            #endregion
+
+            
+
+            return View(filename);
+
+        }
+
+
         public IActionResult Create()
         {
             return View();
