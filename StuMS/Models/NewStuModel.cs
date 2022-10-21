@@ -22,6 +22,15 @@ namespace StuMS.Models
         [Range(18, 60)]
         public int Age { get; set; }
 
+        
+        
+
+
+
+
+
+
+
 
 
     }
