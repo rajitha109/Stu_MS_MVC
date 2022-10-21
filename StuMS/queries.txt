@@ -24,3 +24,6 @@ ADD FOREIGN KEY (StudentId) REFERENCES Student(Id);
 INSERT INTO Student (Stuname,contact,age) VALUES ('Sanuka', 0752329654, 30);
 
 ALTER TABLE Marks ADD TotalMarks int;
+
+
+ALTER TABLE Marks ADD TotalMarks AS (Maths + Science + English);

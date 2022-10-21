@@ -21,8 +21,27 @@ namespace StuMS.Controllers
             return View(displaydata);
             
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(NewMarkModel mark)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Add(mark);
+                await _db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View();
 
 
+
+
+
+        }
+    }
 
     }
-}
