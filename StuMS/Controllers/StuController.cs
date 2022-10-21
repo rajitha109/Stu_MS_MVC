@@ -47,8 +47,8 @@ namespace StuMS.Controllers
 
             }
 
-            var getempdetails = await _db.Student.FindAsync(id);
-            return View(getempdetails);
+            var getStudetails = await _db.Student.FindAsync(id);
+            return View(getStudetails);
 
         }
         [HttpPost]
@@ -72,8 +72,8 @@ namespace StuMS.Controllers
 
             }
 
-            var getempdetails = await _db.Student.FindAsync(id);
-            return View(getempdetails);
+            var getStudetails = await _db.Student.FindAsync(id);
+            return View(getStudetails);
 
         }
 

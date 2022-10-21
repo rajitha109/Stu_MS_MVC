@@ -1,0 +1,48 @@
+﻿@model StuMS.Models.NewMarkModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>NewMarkModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StudentId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maths)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maths)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Science)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Science)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.English)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.English)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalMarks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalMarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Index">Back to List</a>
+</div>

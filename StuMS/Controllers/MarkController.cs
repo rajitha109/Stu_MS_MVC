@@ -37,11 +37,23 @@ namespace StuMS.Controllers
             }
             return View();
 
+        }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Index");
 
+            }
 
+            var getmarkdetails = await _db.Marks.FindAsync(id);
+            return View(getmarkdetails);
 
         }
+
+
+
     }
 
     }
