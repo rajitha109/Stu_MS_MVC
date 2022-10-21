@@ -1,0 +1,22 @@
+
+create table Student
+(
+Stuid int not null primary key identity(1,1),
+Stuname nvarchar(100),
+contact int,
+age int,
+
+);
+
+create table Marks
+(
+id int not null primary key identity(1,1),
+StudentId int,
+Maths int,
+Science int,
+English int,
+
+);
+
+ALTER TABLE Marks
+ADD FOREIGN KEY (StudentId) REFERENCES Student(Id);
