@@ -11,9 +11,9 @@ namespace StuMS.Models
         [Display(Name = "StudentId")]
         public int StudentId { get; set; }
 
-       
-        [Required(ErrorMessage = "Enter English Marks")]
-        [Display(Name = "English Marks")]
+     
+        [Display(Name = "Total Marks")]
+        
         public int TotalMarks { get; set; }
 
 
