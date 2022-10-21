@@ -20,3 +20,6 @@ English int,
 
 ALTER TABLE Marks
 ADD FOREIGN KEY (StudentId) REFERENCES Student(Id);
+
+INSERT INTO Student (Stuname,contact,age) VALUES ('Sanuka', 0752329654, 30);
+
