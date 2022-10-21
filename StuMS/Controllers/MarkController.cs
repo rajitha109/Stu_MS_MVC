@@ -17,9 +17,12 @@ namespace StuMS.Controllers
 
         public IActionResult Index()
         {
-            var displaydata = _db.Mark.ToList();
+            var displaydata = _db.Marks.ToList();
             return View(displaydata);
+            
         }
+
+
 
     }
 }

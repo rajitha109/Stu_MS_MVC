@@ -11,10 +11,22 @@ namespace StuMS.Models
         [Display(Name = "StudentId")]
         public int StudentId { get; set; }
 
-     
+        [Required(ErrorMessage = "Enter Maths Marks")]
+        [Display(Name = "Maths")]
+        public int Maths { get; set; }
+
+        [Required(ErrorMessage = "Enter Science Marks")]
+        [Display(Name = "Science")]
+        public int Science { get; set; }
+
+
+        [Required(ErrorMessage = "Enter English Marks")]
+        [Display(Name = "English")]
+        public int English { get; set; }
+
         [Display(Name = "Total Marks")]
-        
         public int TotalMarks { get; set; }
+
 
 
     }

@@ -8,7 +8,7 @@ namespace StuMS.Models
 
         }
         public DbSet<NewStuModel> Student { get; set; }
-        public DbSet<NewMarkModel> Mark { get; set; }
+        public DbSet<NewMarkModel> Marks { get; set; }
 
 
     }
