@@ -14,11 +14,15 @@ namespace StuMS.Controllers
             _db = db;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var displaydata = _db.Student.ToList();
+            //var displaydata = _db.Student.ToList();
+            var displaydata = _db.Student.Include(s => s.Mark).AsNoTracking();
+
             return View(displaydata);
         }
+
+
 
         public IActionResult Create()
         {

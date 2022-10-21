@@ -27,6 +27,8 @@ namespace StuMS.Models
         [Display(Name = "Total Marks")]
         public int TotalMarks { get; set; }
 
+        public NewStuModel Student { get; set; }
+
 
 
     }

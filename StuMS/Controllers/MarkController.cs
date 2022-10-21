@@ -17,7 +17,8 @@ namespace StuMS.Controllers
 
         public IActionResult Index()
         {
-            var displaydata = _db.Marks.ToList();
+            //var displaydata = _db.Marks.ToList();
+            var displaydata = _db.Marks.Include(m => m.Student);
             return View(displaydata);
             
         }
